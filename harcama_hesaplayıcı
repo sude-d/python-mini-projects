@@ -1,0 +1,18 @@
+print("Harcama Hesaplayıcı")
+
+toplam = 0
+
+while True:
+    gider = input("Gider tutarı gir (bitirmek için q yaz): ")
+
+    if gider == "q":
+        break
+
+    try:
+        gider = float(gider)
+        toplam += gider
+    except ValueError:
+        print("Lütfen sayi gir!")
+        continue
+
+print("Toplam harcama:", toplam)
